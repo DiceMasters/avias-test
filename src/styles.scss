@@ -1,0 +1,43 @@
+html,
+body {
+  padding: 0;
+  margin: 0;
+}
+
+.App {
+  width: 100vw;
+  height: 100vh;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background-color: #f3f7fa;
+
+  font-family: sans-serif;
+
+  &-layout {
+    max-width: 100%;
+    width: 500px;
+
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: auto;
+    grid-template-areas: "transfer tickets";
+    gap: 16px;
+
+    &__transfer {
+      grid-area: transfer;
+    }
+
+    &__tickets {
+      max-height: 100vh;
+      height: 500px;
+
+      grid-area: tickets;
+
+      overflow-y: auto;
+      overflow-x: hidden;
+    }
+  }
+}
